@@ -1,0 +1,28 @@
+body {
+	background-color:beige;
+}
+
+.clock {
+}
+
+.clock h1 {
+}
+
+.welcome {
+}
+
+h5 {
+	transition: 0.2s ease-in-out;
+}
+
+h5:hover {
+	cursor : pointer;
+	color : blue;}
+
+.displayNone {
+	display : None;
+}
+
+.displayShow {
+	display : block;
+}
