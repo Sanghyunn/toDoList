@@ -11,11 +11,12 @@ body {
 .welcome {
 }
 
-h5 {
+p {
 	transition: 0.2s ease-in-out;
+	font-size: 0.8em;
 }
 
-h5:hover {
+p:hover {
 	cursor : pointer;
 	color : blue;}
 
