@@ -2,13 +2,12 @@ const toDoForm = toDoContainer.querySelector(".toDoForm");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = toDoContainer.querySelector(".toDoList");
 
-const TODOS_LS = "toDos";
-
 let toDos = [];
 
 
 function loadToDos(){
-    const loadedToDos = localStorage.getItem(TODOS_LS);
+    USER_NAME = localStorage.getItem(USER_LS);
+    const loadedToDos = localStorage.getItem(USER_NAME);
     if(loadedToDos !== null){
         const parsedToDos = JSON.parse(loadedToDos);
         parsedToDos.forEach(function(toDo){
@@ -27,21 +26,21 @@ function deleteToDo(event){
     });
     
     toDos = cleanToDos;
-   // console.log(cleanToDos);
 
     saveToDos();
+
 
 }
 
 function saveToDos(){
-    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+    localStorage.setItem(USER_NAME, JSON.stringify(toDos));
 }
 
 function findEmptyId(){
     let tempId = 1;
     for(let i = 0; i < toDos.length; i++){
         
-        if(tempId === toDos[i].id) {tempId++; i = 0;}
+        if(tempId === toDos[i].id) {tempId++; i = 0;} // 중복 id 발견 시 id의 숫자를 1 증가시키고 중복 id가 없을때까지 for문 반복을 돌린다.
     }
 
     return tempId;
@@ -80,7 +79,8 @@ function handleSubmit(event){
 
 function Init(){
     loadToDos();
-    toDoForm.addEventListener("submit", handleSubmit)
+    toDoForm.addEventListener("submit", handleSubmit);
+
 }
 
 Init();
