@@ -1,0 +1,65 @@
+.displayNone {
+    display : none;
+}
+
+
+header {
+
+}
+    header h1 {
+        float : left;
+        margin : 100px 0px 10px 360px;
+       border : 1px solid #ccc; 
+        width : 50%;
+        text-align : center;
+        font-size : 4em;
+        letter-spacing : 0.2em;
+    }
+
+.clock {
+    border : 1px solid #ccc;
+    width : 50%;
+    
+    
+    position:absoulte;
+    float : left;
+    margin-left : 360px;
+
+}
+    .clock h1 {
+        text-align : center;
+    }
+
+.login {
+    border : 1px solid #ccc;
+    
+    position : absolute;
+    margin : 300px 0px 10px 660px;
+    
+}
+    .login input {
+        width : 120px;
+    }
+
+.welcome {
+    border : 1px solid #ccc;
+    
+    position : absolute;
+    margin : 290px 0px 10px 360px;
+    width : 50%;
+    
+}
+    .welcome h3 {
+        text-align : center;
+    }
+
+    .welcome p {
+        margin-right : 50px;
+        text-align : right;
+        font-size : 0.8em;
+    }
+
+        .welcome p:hover {
+            color : blue;
+            cursor : pointer;
+        }
